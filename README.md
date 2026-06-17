@@ -61,7 +61,7 @@ src/main/java/com/group14/virtualpet/
 Group 14 — Western University, CS 2212 (Fall 2024)
 
 - Pragalvha Sharma
-- Aalyan Muhammad
+- Aaliyan Muhammad
 - Athul Charanthara
-- Krish Naula
-- Manav Joshi
+- Krish Narula
+- Manan Joshi
