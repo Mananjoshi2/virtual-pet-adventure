@@ -2,6 +2,10 @@
 
 A Tamagotchi-style desktop game built with Java Swing for CS 2212 at Western University.
 
+## Demo
+
+[![Virtual Pet Adventure Demo](https://img.youtube.com/vi/JGU989oSHyw/0.jpg)](https://youtu.be/JGU989oSHyw)
+
 ## Overview
 
 Care for a robot pet by managing its health, hunger, sleep, and happiness. Feed it, play with it, take it to the vet, and give it gifts — but watch out, its stats decay over time. Let them bottom out and your pet dies.
