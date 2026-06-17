@@ -59,4 +59,10 @@ nbdist/
 .nb-gradle/
 
 # VS Code specific files
-.vscode/ 
+.vscode/
+
+# macOS metadata
+.DS_Store
+
+# Save files (user-specific game data)
+saves/

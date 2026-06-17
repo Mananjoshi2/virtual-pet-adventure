@@ -1,97 +1,67 @@
-# Virtual Pet Adventure 🐾
-**Your Digital Companion**  
-CS2212 – Software Tools & Systems Programming  
-Western University – Fall 2024  
-Team 14
+# Virtual Pet Adventure
 
----
+A Tamagotchi-style desktop game built with Java Swing for CS 2212 at Western University.
 
-## 🎮 Project Overview
+## Overview
 
-**Virtual Pet Adventure** is an interactive desktop simulation game where users care for a virtual pet by managing its health, sleep, hunger, and happiness. Inspired by Tamagotchi-style games, this project is built using Java Swing and follows object-oriented principles. The player interacts with their pet through feeding, playing, exercising, giving gifts, and visiting the vet — all while managing limited resources and time.
+Care for a robot pet by managing its health, hunger, sleep, and happiness. Feed it, play with it, take it to the vet, and give it gifts — but watch out, its stats decay over time. Let them bottom out and your pet dies.
 
----
+Three pet types offer different difficulty levels:
 
-## 🛠️ Technologies Used
+| Pet | Difficulty | Notes |
+|---|---|---|
+| RoboFriend | Easy | Forgiving stat decay |
+| MechaMate | Medium | Balanced needs |
+| Tech Titan | Hard | Demands constant attention |
 
-- Java 17  
-- Java Swing (GUI)  
-- Maven (build automation)  
-- Git & GitHub (version control)
+## Features
 
----
+- Pet states: Normal, Hungry, Angry, Sleeping, Dead
+- Real-time stat decay with per-pet rates
+- Inventory system with food and gift items
+- Save/load game state per pet name
+- Parental controls with session time limits and password protection
+- Emergency food drop when inventory is empty and the pet goes hungry
 
-## 🚀 How to Run
+## Requirements
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR-GROUP-URL/group14.git
+- Java 21+
+- Maven 3.6+
 
-2. Navigate to the project folder:
-cd group14
+## Running
 
-3. Compile and run using Maven:
-   ```bash
-   mvn compile
-   mvn exec:java -Dexec.mainClass="com.group14.virtualpet.Main"
-   ```
+```bash
+git clone https://github.com/mananjoshi211/virtual-pet-adventure.git
+cd virtual-pet-adventure
+mvn compile exec:java -Dexec.mainClass="com.group14.virtualpet.Main"
+```
 
-⚠️ Please make sure Java 17 is installed and available on your system.
+Or build a standalone JAR:
 
-# 🐱 Pet Types
-RoboFriend: Forgiving and easy to care for / Difficulty: Easy
-MechaMate: Balanced stats and energy / Difficulty: Medium
-Tech Titan: Demands high attention and strategy / Difficulty: Hard
+```bash
+mvn package
+java -jar target/virtual-pet-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
 
-Each pet has unique hunger rates, energy needs, and mood sensitivity!
+## Project Structure
 
--- 
+```
+src/main/java/com/group14/virtualpet/
+├── Main.java                         # Entry point
+├── MainFrame.java                    # Top-level window, panel switching
+├── model/                            # Pet, inventory, items, state enums
+├── state/                            # GameState (serialized save data)
+├── ui/                               # Top-level panels (menu, selection, settings, etc.)
+│   └── gameplayPanelComponents/      # Gameplay sub-panels
+└── util/                             # AudioManager, SaveLoadUtil
+```
 
-# 📋 Key Features
-✅ Customizable pet with user-defined name
-✅ Pet states: Normal, Hungry, Angry, Sleeping, Dead
-✅ Real-time stat decay and action cooldowns
-✅ Randomly granted food/gift items
-✅ Save/load game state (per pet name)
-✅ Tutorial panel with instructions
-✅ Parental controls with time limits
-✅ Emergency food drop mechanic to avoid starvation (custom feature)
+## Team
 
-# 🔐 Parental Controls
-Playtime Limit: Set and enforce session duration
+Group 14 — Western University, CS 2212 (Fall 2024)
 
-Password Protection: Access requires parent password
-
-Revive Option: Bring your pet back to life
-
-(Planned): Track total & average playtime across sessions
-
-# ✨ Extra Feature (Custom Requirement)
-As our extra functional feature, we implemented:
-
-Emergency Food Rescue System
-If the pet enters a Hungry state and the player has no food in inventory, a special "Emergency Ration" is automatically granted to avoid unfair pet death.
-
-# 🧑‍💻 Development Team
-Pragalvha Sharma
-
-Aalyan Muhammad
-
-Athul Charanthara
-
-Krish Naula
-
-Manav Joshi
-
-# 📁 File Structure
-group14/
-│
-├── src/                     # Source code
-│   └── com/group14/...
-│
-├── pom.xml                  # Maven build file
-├── README.md                # Project documentation
-└── .gitignore               # Ignored files
-
-# 📦 Version
-v1.0.0 – Final Build for Submission
+- Pragalvha Sharma
+- Aalyan Muhammad
+- Athul Charanthara
+- Krish Naula
+- Manav Joshi
